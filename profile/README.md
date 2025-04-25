@@ -3,7 +3,7 @@ Clone both repositories, then in the parent folder create a docker-compose and .
 ## docker-compose.yml
 ```yml
 services:
- seguimientos-db:
+ seguimientos-postgres-db:
    image: postgres:17
    environment:
      POSTGRES_DB: ${DB_NAME}
@@ -15,14 +15,13 @@ services:
      - postgres_data:/var/lib/postgresql/data
    env_file:
      - .env
-
  seguimientos-backend:
    build: Backend-SistemaDeSeguimiento/.
    container_name: seguimientos-backend
    ports:
      - "8000:8000"
    depends_on:
-     - seguimientos-db
+     -  seguimientos-postgres-db
    environment:
      SECRET_KEY: ${SECRET_KEY}
      DEBUG: ${DEBUG}
@@ -32,6 +31,20 @@ services:
      DB_HOST: ${DB_HOST}
      DB_PORT: ${DB_PORT}
    env_file:
+     - .env
+ seguimientos-frontend:
+    build: Frontend-SistemaDeSeguimiento/frontend/.
+    container_name: seguimientos-frontend
+    ports:
+     - "3000:3000"
+    depends_on:
+     - seguimientos-backend
+    environment:
+      ORIGIN: ${ORIGIN}
+      API_URI: ${API_URI}
+      BACKEND_PUBLIC_URL: ${BACKEND_PUBLIC_URL}
+      NODE_ENV: ${NODE_ENV}
+    env_file:
      - .env
 volumes:
    postgres_data:
@@ -45,6 +58,9 @@ DB_USERNAME="postgres"
 DB_PASSWORD="1234"
 DB_HOST="seguimientos-postgres-db" #As it is in a docker network use the Database container name
 DB_PORT="5432"
+API_URI = "http://seguimientos-backend:8000" #As it is in a docker network use the backend container name
+BACKEND_PUBLIC_URL = "http://0.0.0.0:8000"
+NODE_ENV="debug" #Set to production for production
 ```
 ## Then run
 `docker compose up`
