@@ -1,5 +1,6 @@
-# docker-compose.yml
-
+# Deploy
+Clone both repositories, then in the parent folder create a docker-compose and .env
+## docker-compose.yml
 ```yml
 services:
  seguimientos-db:
@@ -35,3 +36,17 @@ services:
 volumes:
    postgres_data:
 ```
+## .env example
+```py
+SECRET_KEY="django-insecure-1seo&72qbf8p6z2t&7m2%_mvnbslm$)g#wy4ix@bbruuwmug"
+DEBUG=True # This should be false for production
+DB_NAME="seguimientos"
+DB_USERNAME="postgres"
+DB_PASSWORD="1234"
+DB_HOST="seguimientos-postgres-db" #As it is in a docker network use the Database container name
+DB_PORT="5432"
+```
+## Then run
+`docker compose up`
+`docker exec -it seguimientos-backend python manage.py migrate`
+`docker exec -it seguimientos-backend python manage.py createsuperuser`
