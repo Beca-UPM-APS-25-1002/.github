@@ -6,7 +6,7 @@ Este documento es una guía para desarrolladores sobre cómo desplegar un sistem
 # Despliegue
 Clona ambos repositorios, luego, en la carpeta raiz a ambas, crea un archivo docker-compose y un archivo .env
 
-## .docker-compose.yml
+## docker-compose.yml
 ```yml
 services:
   seguimientos-postgres-db:
