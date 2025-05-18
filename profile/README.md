@@ -1,6 +1,9 @@
 # Sistema de Seguimiento de Docencias - Guía del Desarrollador
 Este documento es una guía para desarrolladores sobre cómo desplegar un sistema diseñado para facilitar la gestión y el seguimiento de las actividades de docencia dentro de instituciones educativas. El objetivo principal es proporcionar una herramienta que permita a los educadores y administradores organizar, registrar y monitorear el progreso académico y las responsabilidades de enseñanza de manera eficiente.
 # Desarrollo
+Para una guía detallada sobre el setup del entorno de desarrollo, ver el README.md de cada repositorio.
+## Diagrama de tablas
+![image](https://github.com/user-attachments/assets/2e0c1724-be3c-4758-9167-53274d2be552)
 
 
 # Despliegue
