@@ -1,6 +1,10 @@
+# Sistema de Seguimiento de Docencias - Guía del Desarrollador
 Este documento es una guía para desarrolladores sobre cómo desplegar un sistema diseñado para facilitar la gestión y el seguimiento de las actividades de docencia dentro de instituciones educativas. El objetivo principal es proporcionar una herramienta que permita a los educadores y administradores organizar, registrar y monitorear el progreso académico y las responsabilidades de enseñanza de manera eficiente.
-# Sistema de Seguimiento de Docencias - Guía del DesarrolladorDespliegue
-Clona ambos repositorios, luego, en la carpeta padre, crea un archivo docker-compose y un archivo .env
+# Desarrollo
+
+
+# Despliegue
+Clona ambos repositorios, luego, en la carpeta raiz a ambas, crea un archivo docker-compose y un archivo .env
 
 ## .docker-compose.yml
 ```yml
