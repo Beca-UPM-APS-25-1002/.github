@@ -61,15 +61,16 @@ volumes:
 ## Ejemplo de .env
 ```py
 SECRET_KEY="django-insecure-1seo&72qbf8p6z2t&7m2%_mvnbslm$)g#wy4ix@bbruuwmug"
-DEBUG=True # Esto debería ser False para producción
+DEBUG=True
 DB_NAME="seguimientos"
 DB_USERNAME="postgres"
 DB_PASSWORD="1234"
-DB_HOST="seguimientos-postgres-db" # Como está en una red Docker, usa el nombre del contenedor de la base de datos
+DB_HOST="seguimientos-postgres-db"
 DB_PORT="5432"
-API_URI = "http://seguimientos-backend:8000" # Como está en una red Docker, usa el nombre del contenedor del backend
-BACKEND_PUBLIC_URL = "http://0.0.0.0:8000"
-NODE_ENV="debug" # Establecer a "production" para producción
+ORIGIN="http://0.0.0.0:3000"
+API_URI = "http://seguimientos-backend:8000"
+BACKEND_PUBLIC_URL = "http://0.0.0.0:8001"
+NODE_ENV="debug"
 ```
 Luego, ejecuta:
 ```bash
