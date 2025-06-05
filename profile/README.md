@@ -67,6 +67,7 @@ DB_USERNAME="postgres"
 DB_PASSWORD="1234"
 DB_HOST="seguimientos-postgres-db"
 DB_PORT="5432"
+DEFAULT_FROM_EMAIL="mail@mailserver.com" #Dirección desde la que se mandarán los correos
 ORIGIN="http://0.0.0.0:3000"
 API_URI = "http://seguimientos-backend:8000"
 BACKEND_PUBLIC_URL = "http://0.0.0.0:8001"
