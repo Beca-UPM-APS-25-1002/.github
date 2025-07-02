@@ -60,18 +60,18 @@ volumes:
 ```
 ## Ejemplo de .env
 ```py
-SECRET_KEY="django-insecure-1seo&72qbf8p6z2t&7m2%_mvnbslm$)g#wy4ix@bbruuwmug"
-DEBUG=True
+SECRET_KEY="django-insecure-1seo&72qbf8p6z2t&7m2%_mvnbslm$)g#wy4ix@bbruuwmug" #Una llave segura
+DEBUG=True # Poner en False cuando se haga el despliegue
 DB_NAME="seguimientos"
 DB_USERNAME="postgres"
 DB_PASSWORD="1234"
 DB_HOST="seguimientos-postgres-db"
 DB_PORT="5432"
 DEFAULT_FROM_EMAIL="mail@mailserver.com" #Dirección desde la que se mandarán los correos
-ORIGIN="http://0.0.0.0:3000"
-API_URI = "http://seguimientos-backend:8000"
-BACKEND_PUBLIC_URL = "http://0.0.0.0:8001"
-NODE_ENV="debug"
+ORIGIN="http://0.0.0.0:3000" #URL del frontend, todo el dominio
+API_URI = "http://seguimientos-backend:8000" # URL del backend, preferiblemente la url interna de docker
+BACKEND_PUBLIC_URL = "http://0.0.0.0:8001" # URL pública del backend, para conexión a la interfaz administrativa
+NODE_ENV="debug" # Poner production cuando se haga el despliegue
 ```
 Luego, ejecuta:
 ```bash
