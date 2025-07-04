@@ -72,7 +72,7 @@ ORIGIN="http://0.0.0.0:3000" #URL del frontend, todo el dominio
 API_URI = "http://seguimientos-backend:8000" # URL del backend, preferiblemente la url interna de docker
 BACKEND_PUBLIC_URL = "http://0.0.0.0:8001" # URL pública del backend, para conexión a la interfaz administrativa
 PUBLIC_NAVBAR_TITLE = "Departamento de xyz IES xyz" # Titúlo que se añade a la página principal de la aplicación
-NODE_ENV="debug" # Poner production cuando se haga el despliegue
+NODE_ENV="debug" # Poner production cuando se haga el despliegue, esto es una "build-time variable"
 ```
 Luego, ejecuta:
 ```bash
